@@ -14,20 +14,20 @@ class App extends Component {
     filter: '',
   };
 
-  componentDidMount() {
-    const persistedContacts = localStorage.getItem('contacts');
-    if (persistedContacts) {
-      this.setState({
-        contacts: JSON.parse(persistedContacts),
-      });
-    }
-  }
+  // componentDidMount() {
+  //   const persistedContacts = localStorage.getItem('contacts');
+  //   if (persistedContacts) {
+  //     this.setState({
+  //       contacts: JSON.parse(persistedContacts),
+  //     });
+  //   }
+  // }
 
-  componentDidUpdate(prevState) {
-    if (prevState.contacts !== this.state.contacts) {
-      localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
-    }
-  }
+  // componentDidUpdate(prevState) {
+  //   if (prevState.contacts !== this.state.contacts) {
+  //     localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
+  //   }
+  // }
   onHandleNewContact = data => {
     const comparableEl = this.state.contacts.some(
       el => el.name.toLowerCase() === data.name.toLowerCase()
