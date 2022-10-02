@@ -17,7 +17,7 @@ const Filter = ({ filter, searchContact }) => {
 };
 
 Filter.propTypes = {
-  value: PropTypes.string.isRequired,
+  filter: PropTypes.string.isRequired,
   searchContact: PropTypes.func.isRequired,
 };
 
